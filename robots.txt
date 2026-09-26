@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cwaggoner.github.io/waggoner-racing-engineer/sitemap.xml
