@@ -3198,8 +3198,10 @@ function drawLapChart(c, s) {
   const x = i => pad.l + (i/(n-1))*(w-pad.l-pad.r);
   const y = v => pad.t + (1-(v-min)/(max-min))*(h-pad.t-pad.b);
 
-  ctx.strokeStyle = "#333333"; ctx.lineWidth = 1;
+  ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.6;
+  ctx.setLineDash([6, 4]);
   ctx.beginPath(); ctx.moveTo(pad.l, y(s.median)); ctx.lineTo(w-pad.r, y(s.median)); ctx.stroke();
+  ctx.setLineDash([]);
   ctx.fillStyle = "#ffffff"; ctx.font = "11px sans-serif";
   ctx.fillText("med " + s.median.toFixed(3), w-pad.r-70, y(s.median)-4);
 
