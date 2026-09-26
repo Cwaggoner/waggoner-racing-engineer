@@ -1,12 +1,7 @@
 # Waggoner Designs Racing Engineer
 
-Single-file RC racing app.
+Live: https://cwaggoner.github.io/waggoner-racing-engineer/
 
-## Live URL (after you add index.html and turn on Pages)
-https://cwaggoner.github.io/waggoner-racing-engineer/
+`index.html` and `og-image.jpg` are in this repo.
 
-## What is in this repo now
-README only. The app file is ~5.5 MB and has to be uploaded in the GitHub website:
-
-1. Add file → Upload files → `index.html`
-2. Settings → Pages → Deploy from a branch → `main` / `/ (root)`
+Latest chat build (white dashed median line on Analysis charts) is **not** in GitHub yet — replace `index.html` via **Add file → Upload files** with the new download from Grok. GitHub Pages will refresh in a minute.
