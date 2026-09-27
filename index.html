@@ -387,6 +387,8 @@ textarea { min-height: 70px; resize: vertical; }
 .row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
 
 .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; align-items: center; }
+.pdf-row { flex-wrap: nowrap; gap: 10px; overflow-x: auto; }
+.pdf-row a.diamond { flex: 0 0 auto; white-space: nowrap; }
 .btn-row button.diamond,
 .btn-row a.diamond {
   font-family: "Barlow Condensed", "Oswald", "Arial Narrow", sans-serif;
@@ -1622,12 +1624,10 @@ footer.site-foot {
         <div class="card" style="margin-bottom:14px">
           <h3>PDF LIBRARY ON THIS SITE</h3>
           <p class="muted">Every PDF currently in the GitHub repo. Opens in a new tab from GitHub Pages.</p>
-          <div class="btn-row">
-            <a class="diamond gold" href="B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">B7 EDITABLE SETUP SHEET</a>
+          <div class="btn-row pdf-row">
+            <a class="diamond gold" href="B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">B7 SETUP SHEET</a>
             <a class="diamond" href="https://github.com/Cwaggoner/waggoner-racing-engineer/blob/main/B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">GITHUB</a>
-          </div>
-          <div class="btn-row">
-            <a class="diamond gold" href="RC10B7-Carpet-Manual-V2-8-22-2024.pdf" target="_blank" rel="noopener">RC10 B7 INSTRUCTION MANUAL (ALL 10 BAGS)</a>
+            <a class="diamond gold" href="RC10B7-Carpet-Manual-V2-8-22-2024.pdf" target="_blank" rel="noopener">B7 MANUAL — 10 BAGS</a>
             <a class="diamond" href="https://github.com/Cwaggoner/waggoner-racing-engineer/blob/main/RC10B7-Carpet-Manual-V2-8-22-2024.pdf" target="_blank" rel="noopener">GITHUB</a>
           </div>
         </div>
