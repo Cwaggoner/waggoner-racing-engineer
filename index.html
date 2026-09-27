@@ -418,14 +418,14 @@ td { padding: 7px 6px; border-bottom: 1px solid #24242a; font-variant-numeric: t
 .pills.center { justify-content: center; }
 .pill {
   padding: 5px 12px; border-radius: 99px; font-size: 11px; letter-spacing: .1em;
-  border: 1px solid #444; color: #ccc; text-transform: uppercase;
+  border: 1px solid #555; color: #d0d0d0 !important; text-transform: uppercase;
   background: transparent; cursor: pointer; font-family: inherit;
 }
-.pill:hover { border-color: #ff6a00; color: #ff6a00; }
-.pill.on { background: #ff6a00; color: #111; border-color: #ff6a00; font-weight: 700; }
-.card.light .pill { border-color: #888; color: #222; }
-.card.light .pill:hover { border-color: #111; color: #111; }
-.card.light .pill.on { background: #ff6a00; color: #111; border-color: #ff6a00; }
+.pill:hover { border-color: #ff6a00; color: #ff6a00 !important; }
+.pill.on { background: #ff6a00; color: #111 !important; border-color: #ff6a00; font-weight: 700; }
+.card.light .pill { border-color: #666; color: #d0d0d0 !important; }
+.card.light .pill:hover { border-color: #ff6a00; color: #ff6a00 !important; }
+.card.light .pill.on { background: #ff6a00; color: #111 !important; border-color: #ff6a00; }
 
 .chart-wrap { background: #000; border-radius: 12px; padding: 0; overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box; border: 2px solid #ff6a00; }
 .chart-wrap canvas,
@@ -1620,11 +1620,15 @@ footer.site-foot {
         <h2 class="section">Tuning — paddock school</h2>
         <p class="muted" style="margin:-8px 0 14px">Change one thing per qualifier. Write the result. If you change three things you will not know which one helped.</p>
         <div class="card" style="margin-bottom:14px">
-          <h3>ASSOCIATED B7 SETUP SHEET</h3>
-          <p class="muted">Official Team Associated RC10 B7 editable setup sheet (the PDF on this GitHub repo). Opens in a new tab. Fill it at the bench; the Engineer tab is still the race-night form.</p>
+          <h3>PDF LIBRARY ON THIS SITE</h3>
+          <p class="muted">Every PDF currently in the GitHub repo. Opens in a new tab from GitHub Pages.</p>
           <div class="btn-row">
-            <a class="diamond gold" href="B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">OPEN B7 SETUP SHEET PDF</a>
-            <a class="diamond" href="https://github.com/Cwaggoner/waggoner-racing-engineer/blob/main/B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">VIEW ON GITHUB</a>
+            <a class="diamond gold" href="B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">B7 EDITABLE SETUP SHEET</a>
+            <a class="diamond" href="https://github.com/Cwaggoner/waggoner-racing-engineer/blob/main/B7_EditableSetupSheet.pdf" target="_blank" rel="noopener">GITHUB</a>
+          </div>
+          <div class="btn-row">
+            <a class="diamond gold" href="RC10B7-Carpet-Manual-V2-8-22-2024.pdf" target="_blank" rel="noopener">RC10 B7 INSTRUCTION MANUAL (ALL 10 BAGS)</a>
+            <a class="diamond" href="https://github.com/Cwaggoner/waggoner-racing-engineer/blob/main/RC10B7-Carpet-Manual-V2-8-22-2024.pdf" target="_blank" rel="noopener">GITHUB</a>
           </div>
         </div>
         <div class="pills center" id="tune-pills">
