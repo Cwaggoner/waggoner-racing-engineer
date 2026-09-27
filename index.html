@@ -142,7 +142,7 @@ body::before {
     linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.06) 18%, rgba(0,0,0,0) 46%, rgba(0,0,0,.45) 100%);
   color: #fff;
   text-shadow: 0 1px 0 #000;
-  border-color: #ead56a;
+  border-color: #ff6a00;
 }
 
 .app { position: relative; z-index: 1; min-height: 100%; }
@@ -173,7 +173,7 @@ body::before {
 .brand-lockup h1 span { display: block; color: var(--gold-2); font-size: 12px; letter-spacing: .18em; }
 .track-chip {
   justify-self: center;
-  background: #111; border: 1px solid var(--gold);
+  background: #111; border: 1px solid #ff6a00;
   padding: 6px 14px; border-radius: 99px; font-size: 13px;
   letter-spacing: .12em; text-transform: uppercase;
 }
@@ -195,9 +195,9 @@ body::before {
   box-sizing: border-box;
 }
 .hdr-white {
-  width: 34%;
-  min-width: 120px;
-  padding: 3px 14px 3px 3px;
+  width: 42%;
+  min-width: 220px;
+  padding: 3px 28px 3px 3px;
   background: #ff6a00;
   clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 100%, 0 100%);
   z-index: 2;
@@ -231,7 +231,7 @@ body::before {
 }
 .hdr-name {
   position: absolute;
-  inset: 0 18px 0 0;
+  inset: 3px 30px 3px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,11 +239,13 @@ body::before {
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: .16em;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: .04em;
   color: #ff6a00;
   text-transform: uppercase;
   white-space: nowrap;
+  overflow: hidden;
   pointer-events: none;
 }
 .hdr-yellow {
@@ -265,7 +267,7 @@ body::before {
   inset: 0;
   z-index: 4;
   pointer-events: none;
-  clip-path: polygon(calc(34% - 15px) 0, 100% 0, 100% 100%, calc(34% + 9px) 100%);
+  clip-path: polygon(calc(42% + 8px) 0, 100% 0, 100% 100%, calc(42% + 32px) 100%);
 }
 .brand-marquee {
   display: flex;
@@ -295,7 +297,7 @@ nav.main {
 nav.main button {
   padding: 10px 16px; font-size: 13px; border-radius: 4px;
 }
-nav.main button.active { outline: 2px solid var(--yellow); }
+nav.main button.active { outline: 2px solid #ff6a00; }
 
 main { padding: 16px; max-width: 1280px; margin: 0 auto; }
 
@@ -419,11 +421,11 @@ td { padding: 7px 6px; border-bottom: 1px solid #24242a; font-variant-numeric: t
   border: 1px solid #444; color: #ccc; text-transform: uppercase;
   background: transparent; cursor: pointer; font-family: inherit;
 }
-.pill:hover { border-color: var(--yellow); color: var(--yellow); }
-.pill.on { background: var(--yellow); color: #111; border-color: var(--yellow); font-weight: 700; }
+.pill:hover { border-color: #ff6a00; color: #ff6a00; }
+.pill.on { background: #ff6a00; color: #111; border-color: #ff6a00; font-weight: 700; }
 .card.light .pill { border-color: #888; color: #222; }
 .card.light .pill:hover { border-color: #111; color: #111; }
-.card.light .pill.on { background: var(--yellow); color: #111; border-color: #111; }
+.card.light .pill.on { background: #ff6a00; color: #111; border-color: #ff6a00; }
 
 .chart-wrap { background: #000; border-radius: 12px; padding: 0; overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box; border: 2px solid #ff6a00; }
 .chart-wrap canvas,
@@ -438,7 +440,7 @@ canvas {
 
 .toast {
   position: fixed; right: 16px; bottom: 16px; z-index: 20;
-  background: #111; border: 1px solid var(--gold); color: var(--yellow);
+  background: #111; border: 1px solid #ff6a00; color: #ff6a00;
   padding: 10px 14px; border-radius: 6px; display: none;
   letter-spacing: .08em; text-transform: uppercase; font-size: 13px;
 }
@@ -448,12 +450,12 @@ canvas {
   border: 1px dashed #4a4a55; border-radius: 8px; padding: 10px; min-height: 88px;
   background: #101014;
 }
-.slot.filled { border-style: solid; border-color: var(--gold); }
+.slot.filled { border-style: solid; border-color: #ff6a00; }
 .slot h4 { font-size: 13px; letter-spacing: .08em; }
 .slot p { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
 .rec-box {
-  background: #111; border-left: 4px solid var(--yellow); padding: 10px 12px; margin-top: 10px;
+  background: #111; border-left: 4px solid #ff6a00; padding: 10px 12px; margin-top: 10px;
   font-size: 14px; line-height: 1.45;
 }
 .muted { color: var(--muted); font-size: 13px; }
@@ -939,7 +941,7 @@ footer.site-foot {
     </header>
 
     <div class="brand-banner">
-      <span class="hdr-white"><i></i><span class="hdr-scan" aria-hidden="true"></span><b class="hdr-name">CHRIS WAGGONER</b></span>
+      <span class="hdr-white"><i></i><span class="hdr-scan" aria-hidden="true"></span><b class="hdr-name" id="hdr-date">SATURDAY, SEPTEMBER 27, 2026</b></span>
       <span class="hdr-yellow"><i></i></span>
       <div class="brand-marquee-clip">
         <div class="brand-marquee" id="marquee"></div>
@@ -4550,6 +4552,18 @@ function tickClock() {
   const t = d.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
   if ($("clock")) $("clock").textContent = t;
   if ($("tunes-clock")) $("tunes-clock").textContent = t;
+  const name = document.querySelector(".hdr-name");
+  if (name) {
+    name.textContent = d.toLocaleDateString(undefined, {
+      weekday: "long", year: "numeric", month: "long", day: "numeric"
+    }).toUpperCase();
+    name.style.fontSize = "12px";
+    let px = 12;
+    while (px > 7 && name.scrollWidth > name.clientWidth) {
+      px -= 0.25;
+      name.style.fontSize = px + "px";
+    }
+  }
 }
 
 function init() {
