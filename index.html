@@ -947,6 +947,17 @@ footer.site-foot {
 .b7-art-sm img { max-width: 240px; margin: 0 auto; }
 .b7-art figcaption { color: #aaa; font-size: 12px; margin-top: 6px; text-align: center; }
 
+#engineer input, #engineer select, #engineer textarea,
+.b7-sheet input, .b7-sheet select, .b7-sheet textarea {
+  color: #ffffff !important;
+  background: #141418 !important;
+  caret-color: #ff6a00;
+}
+#engineer input[type="radio"], #engineer input[type="checkbox"],
+.b7-sheet input[type="radio"], .b7-sheet input[type="checkbox"] {
+  width: 16px; height: 16px; accent-color: #ff6a00;
+}
+
 </style>
 </head>
 <body>
@@ -1252,7 +1263,7 @@ footer.site-foot {
             <input id="b7-file" type="file" accept="application/json,.json" hidden onchange="loadB7SheetFile(event)" />
           </div>
           <div class="grid-3">
-            <div><label>Driver</label><input id="b7-driver" /></div>
+            <div><label>Driver</label><input id="b7-driver" value="Chris Waggoner" /></div>
             <div><label>Event</label><input id="b7-event" /></div>
             <div><label>Date</label><input id="b7-date" /></div>
             <div><label>Track</label><input id="b7-track" /></div>
@@ -4757,6 +4768,8 @@ function tickClock() {
 }
 
 function init() {
+  restoreB7Sheet();
+  applyHoosierEngineerDefaults();
   decorateSectionTitles();
   $("marquee").textContent = Array(4).fill(BRANDS.join("   ·   ")).join("   ·   ");
   populateMakes();
@@ -5195,8 +5208,11 @@ function applyHoosierEngineerDefaults() {
   };
   Object.entries(text).forEach(([id, val]) => {
     const el = document.getElementById(id);
-    if (el && !el.value) el.value = val;
+    if (el && !String(el.value || "").trim()) el.value = val;
   });
+  const drv = document.getElementById("b7-driver");
+  if (drv) drv.value = "Chris Waggoner";
+
   const radios = {
     "b7-caster-insert": "+2.5",
     "b7-kickup": "0",
@@ -5220,7 +5236,7 @@ function applyHoosierEngineerDefaults() {
   };
   Object.entries(radios).forEach(([name, val]) => {
     const any = document.querySelector('input[name="'+name+'"]:checked');
-    if (any) return;
+    if (any && any.value) return;
     const el = document.querySelector('input[name="'+name+'"][value="'+val+'"]');
     if (el) el.checked = true;
   });
