@@ -2,4 +2,6 @@
 
 Live: https://cwaggoner.github.io/waggoner-racing-engineer/
 
-Latest: footer orange border matches the 1280px body column. Replace `index.html` with the newest Grok download to publish that fix.
+Latest: Engineer tab has Associated B7 extra geometry (radios on drawings), SAVE SHEET / LOAD SHEET as local JSON. No PDF at the track.
+
+Replace `index.html` with the newest Grok download to publish.
