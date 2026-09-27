@@ -5111,6 +5111,125 @@ const B7_TEXT_IDS = ["b7-driver","b7-event","b7-date","b7-track","b7-qual","b7-m
 const B7_RADIOS = ["b7-caster-insert","b7-kickup","b7-caster-space","b7-bellcrank","b7-axleF","b7-arm-space","b7-hub-type","b7-hub-space","b7-driveshaft","b7-cmount","b7-dmount","b7-axleR","b7-batt-mount","b7-batt-pos","b7-diff-type","b7-capF","b7-capR","b7-wing-ang","b7-surface"];
 const B7_CHECKS = ["b7-kashima","b7-chrome","b7-machined"];
 
+
+function applyHoosierEngineerDefaults() {
+  const text = {
+    "setup-label": "Hoosier Thursday 17.5 Independent baseline",
+    "t-rhF": "24", "t-rhR": "26", "t-droopF": "28", "t-droopR": "31",
+    "t-oilF": "35", "t-oilR": "40", "t-sprF": "AE Yellow", "t-sprR": "AE White",
+    "t-camF": "-1.5", "t-camR": "-1.5", "t-toeF": "-0.5", "t-toeR": "2.5",
+    "t-caster": "10.5", "t-as": "2° middle hole", "t-swayF": "1.2 mm", "t-swayR": "1.3 mm",
+    "t-pinion": "19", "t-spur": "78", "t-diffF": "—", "t-diffC": "—", "t-diffR": "5k",
+    "t-tire": "Class-legal indoor clay pin (JConcepts / Pro-Line)",
+    "t-insert": "Firm dual-stage", "t-wing": "2nd hole / 1 packer", "t-press": "Sealed foam",
+    "t-batt": "Forward tray, centered",
+    "t-notes": "B7 17.5 Independent · Hoosier indoor dirt. Blinky only. Min 1474 g. 2S @ 8.40 V.",
+    "b7-driver": "Chris Waggoner",
+    "b7-event": "Thursday Off-Road",
+    "b7-track": "Hoosier RC Hobbyplex — New Albany, IN",
+    "b7-qual": "3 × 5 min",
+    "b7-main": "A-Main",
+    "b7-armF": "B7 stock arm",
+    "b7-towerF": "B7 stock tower",
+    "b7-hexF": "12 mm",
+    "b7-kpi": "Stock KPI block",
+    "b7-bulk": "B7 plastic bulkhead",
+    "b7-stop": "Stock",
+    "b7-bs1": "2.5 mm",
+    "b7-bs2": "1 mm",
+    "b7-bump": "1 mm washer",
+    "b7-plate": "Stock 5.0 mm",
+    "b7-linkmt": "Inner hole",
+    "b7-bulksp": "Stock",
+    "b7-armR": "B7 stock arm",
+    "b7-towerR": "B7 stock tower",
+    "b7-hexR": "12 mm",
+    "b7-clink": "Inner / 2 washers",
+    "b7-rbs1": "2 mm",
+    "b7-rbs2": "1 mm",
+    "b7-radio": "Sanwa / Flysky pit radio",
+    "b7-servo": "Low-profile 1/10",
+    "b7-epat": "100",
+    "b7-epab": "80",
+    "b7-esc": "Blinky stock",
+    "b7-escset": "Zero timing · drag 5%",
+    "b7-motor": "17.5 blinky",
+    "b7-timing": "0°",
+    "b7-battpack": "2S hardcase 8.40 V",
+    "b7-battw": "Legal pack",
+    "b7-diffh": "Stock",
+    "b7-diffs": "5k",
+    "b7-slip": "— (2WD buggy)",
+    "b7-pads": "—",
+    "b7-slips": "—",
+    "b7-pistF": "1.6 mm 2-hole",
+    "b7-pistR": "1.6 mm 2-hole",
+    "b7-thkF": "1.5 mm",
+    "b7-thkR": "1.5 mm",
+    "b7-limF": "0 / 0",
+    "b7-limR": "0 / 1",
+    "b7-strF": "Stock",
+    "b7-strR": "Stock",
+    "b7-eyeF": "Plastic",
+    "b7-eyeR": "Plastic",
+    "b7-tsize": "Indoor 1/10 off-road",
+    "b7-tcomp": "Groomed clay",
+    "b7-ttrac": "Medium",
+    "b7-tmoist": "Groomed",
+    "b7-ttemp": "72 F",
+    "b7-tf": "Indoor clay pin",
+    "b7-tfc": "Class legal",
+    "b7-tfi": "Firm dual-stage",
+    "b7-tr": "Indoor clay pin",
+    "b7-trc": "Class legal",
+    "b7-tri": "Firm dual-stage",
+    "b7-twheel": "12 mm hex white",
+    "b7-body": "B7 / light 1/10 buggy",
+    "b7-wingF": "—",
+    "b7-wingR": "B7 wing 2nd hole",
+    "b7-chlen": "Stock B7",
+    "b7-sw": "Low-profile",
+    "b7-ew": "2S + blinky ESC",
+    "b7-vw": "1474 g min",
+    "b7-vnotes": "Hoosier house: 2S max, no aggressive tires, transponder required, blinky in 17.5 Independent."
+  };
+  Object.entries(text).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el && !el.value) el.value = val;
+  });
+  const radios = {
+    "b7-caster-insert": "+2.5",
+    "b7-kickup": "0",
+    "b7-caster-space": "Fwd",
+    "b7-bellcrank": "Down",
+    "b7-axleF": "+1",
+    "b7-arm-space": "Mid",
+    "b7-hub-type": "Std",
+    "b7-hub-space": "Mid",
+    "b7-driveshaft": "CVA",
+    "b7-cmount": "Aluminum",
+    "b7-dmount": "Steel",
+    "b7-axleR": "+1",
+    "b7-batt-mount": "Std",
+    "b7-batt-pos": "3",
+    "b7-diff-type": "Ball",
+    "b7-capF": "0",
+    "b7-capR": "+5",
+    "b7-wing-ang": "3",
+    "b7-surface": "Smooth"
+  };
+  Object.entries(radios).forEach(([name, val]) => {
+    const any = document.querySelector('input[name="'+name+'"]:checked');
+    if (any) return;
+    const el = document.querySelector('input[name="'+name+'"][value="'+val+'"]');
+    if (el) el.checked = true;
+  });
+  const dateEl = document.getElementById("b7-date");
+  if (dateEl && !dateEl.value) {
+    dateEl.value = new Date().toLocaleDateString(undefined, { year:"numeric", month:"short", day:"numeric" });
+  }
+}
+
 function collectB7Sheet() {
   const data = { kind: "WDRE-B7-SHEET", v: 1 };
   B7_TEXT_IDS.forEach(id => { const el = document.getElementById(id); if (el) data[id] = el.value; });
