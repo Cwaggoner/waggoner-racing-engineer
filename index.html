@@ -504,9 +504,17 @@ canvas {
 .print-table td:nth-child(odd) { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #444; width: 22%; }
 
 @media print {
+  html, body { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
   body::before, .topbar, .brand-banner, nav.main, .footer-note, .toast, .no-print { display: none !important; }
   body { background: #fff; color: #111; }
-  main { padding: 0; max-width: none; position: static; }
+  .wrap, main, footer.site-foot {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  main { position: static; }
   .view {
     display: none !important;
     position: static !important;
@@ -517,11 +525,39 @@ canvas {
     display: block !important;
     position: relative !important;
     left: auto !important;
-    width: auto !important;
+    width: 100% !important;
+    max-width: none !important;
     visibility: visible !important;
     pointer-events: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  .print-card, .print-card.card.light { box-shadow: none; border: 2px solid #111; background: #fff !important; color: #111 !important; }
+  .print-card, .print-card.card.light {
+    box-shadow: none;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    border: 3px solid #ff6a00 !important;
+    background: #fff !important;
+    color: #111 !important;
+  }
+  footer.site-foot {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+  }
+  .seo-block {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    border: 3px solid #ff6a00 !important;
+    border-radius: 0 !important;
+  }
   .print-model, .print-model img {
     border-color: #111 !important;
     -webkit-print-color-adjust: exact;
